@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_linear"
+    android:gravity="center"
+    tools:context=".activities.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/registerActivityToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#004589FF"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fakebook"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect to the world"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textStyle="italic" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:cardCornerRadius="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REGISTER"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeWidth="3dp"
+                tools:layout_editor_absoluteX="20dp"
+                app:hintTextColor="@color/blue"
+                android:layout_marginHorizontal="15dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/registerActivityEtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Username"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/blue"
+                    android:textColorHint="#878787"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeWidth="3dp"
+                tools:layout_editor_absoluteX="20dp"
+                app:hintTextColor="@color/blue"
+                android:layout_marginHorizontal="15dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/registerActivityEtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/blue"
+                    android:textColorHint="#878787"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeWidth="3dp"
+                tools:layout_editor_absoluteX="20dp"
+                app:hintTextColor="@color/blue"
+                android:layout_marginHorizontal="15dp">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/registerActivityEtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/blue"
+                    android:textColorHint="#878787"
+                    android:textSize="15sp"
+                    android:textCursorDrawable="@null" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeWidth="3dp"
+                tools:layout_editor_absoluteX="20dp"
+                app:hintTextColor="@color/blue"
+                android:layout_marginHorizontal="15dp">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/registerActivityEtConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Confirm password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/blue"
+                    android:textColorHint="#878787"
+                    android:textSize="15sp"
+                    android:textCursorDrawable="@null" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerActivityBtnConfirm"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm"
+                android:textColor="@color/blue"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/blue"
+                app:strokeWidth="3dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="15dp"
+                android:onClick="registerActivityBtnConfirmOnClick"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:padding="2dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/senderChatLayoutLlMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/sender_chat_drawable"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_gravity="end">
+
+        <ImageView
+            android:id="@+id/senderChatLayoutIvSenderImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/senderChatLayoutTvSenderMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Sender send message here"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/senderChatLayoutTvTimeOfMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:text="20:09"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="7dp"
+            android:layout_gravity="end"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

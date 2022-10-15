@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ImageView
+            android:id="@+id/dialogSearchUserIvCover"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#7C7C7C"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="3dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/dialogSearchUserIvAvatar"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/dialogSearchUserTvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Username"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginVertical="15dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dialogSearchUserIvFacebookIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fb"
+            android:layout_marginHorizontal="20dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dialogSearchUserIvInstagramIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ins"
+            android:layout_marginHorizontal="20dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dialogSearchUserIvTiktokIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/tt"
+            android:layout_marginHorizontal="20dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialogSearchUserBtnSendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send message..."
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="2dp"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginVertical="10dp"
+        android:layout_gravity="center"
+        android:padding="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialogSearchUserBtnViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginVertical="10dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:backgroundTint="@color/blue"/>
+
+</LinearLayout>

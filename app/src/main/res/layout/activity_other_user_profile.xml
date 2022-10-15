@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OtherUserProfileActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_linear">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/otherUserProfileActivityToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/blue"
+        app:titleTextColor="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <ImageView
+                    android:id="@+id/otherUserProfileActivityIvCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#7C7C7C"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="otherUserProfileActivityIvCoverOnClick"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="3dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/otherUserProfileActivityIvAvatar"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:onClick="otherUserProfileActivityIvAvatarOnClick"/>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/otherUserProfileActivityTvBigUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Username"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/otherUserProfileActivityCvAddFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:strokeWidth="3dp"
+                app:strokeColor="@color/blue"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:onClick="otherUserProfileActivityCvAddFriendOnClick">
+                <TextView
+                    android:id="@+id/otherUserProfileActivityTvAddFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Add friend"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/otherUserProfileActivityTvPostImageButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_baseline_image_24"
+                        android:onClick="otherUserProfileActivityTvPostImageButtonOnClick"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:endIconMode="clear_text">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/otherUserProfileActivityEtWritePost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:hint="Write something..."
+                            android:textSize="15sp"
+                            android:textColor="@color/blue"
+                            android:textCursorDrawable="@null" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/otherUserProfileActivityTvPostButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Post"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_margin="5dp"
+                        android:textColor="#2196F3"
+                        android:onClick="otherUserProfileActivityTvPostButtonOnClick"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/otherUserProfileActivityIvImagePost"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/otherUserProfileActivityRvPostItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/recycler_view_item_post"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mainActivityToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/blue"
+            app:titleTextColor="@color/white">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:backgroundTint="@color/blue">
+                <ProgressBar
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/white"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/mainActivityIvAvatar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:onClick="mainActivityIvAvatarOnClick"/>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/mainActivityTvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="25dp"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mainActivityTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            app:tabIndicatorColor="@color/white"
+            app:tabTextColor="@color/white">
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mainActivityViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_linear">
+    </androidx.viewpager.widget.ViewPager>
+</LinearLayout>
